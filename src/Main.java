@@ -25,16 +25,6 @@ public class Main{
         lista3.add(45.10F);
         lista3.add(90.29F);
 
-        /*while (it.hasNext()) {
-            LinkedListG<Integer>.Iterator backupIt = lista1.new IteratorGen(it);
-            int element = it.next(); //regresa el dato y avanza al iterador
-            if (element == 3) {
-                lista1.insert(10, Position.BEFORE, backupIt);
-            }
-            if (element == 7) {
-                lista1.insert(15, Position.AFTER, backupIt);
-            }
-        }*/
 
         System.out.println("--------------------------------");
 
