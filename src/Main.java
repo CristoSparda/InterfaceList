@@ -1,29 +1,25 @@
-
+import complements.ArrayList;
 import complements.InterfaceList;
 import complements.IteratorGen;
 import complements.LinkedListG;
-//import complements.Position;
 
 public class Main{
     public static void main(String []args) {
-        InterfaceList<Integer> lista1 = new LinkedListG<>();
-        InterfaceList<String> lista2 = new LinkedListG<>();
-        InterfaceList<Float> lista3 = new LinkedListG<>();
 
-        lista1.add(1);
-        lista1.add(2);
-        lista1.add(3);
+        int cuenta = LinkedListG.getListCount();
+
+        InterfaceList<Integer> lista1 = new ArrayList<>();
+        InterfaceList<String> lista2 = new ArrayList<>();
+
         lista1.add(7);
+        lista1.add(4);
+        lista1.add(14);
+        lista1.add(3);
 
         lista2.add("Hola");
         lista2.add("Object");
         lista2.add("Oriented");
         lista2.add("Programing");
-
-        lista3.add(3.25F);
-        lista3.add(2.90F);
-        lista3.add(45.10F);
-        lista3.add(90.29F);
 
 
         System.out.println("--------------------------------");
@@ -66,24 +62,5 @@ public class Main{
 
             System.out.println("Dato: " + name);
         }
-
-        System.out.println("----------------------------");
-
-        IteratorGen<Float> it3 = lista3.getIterator();
-        System.out.println("El tamaño es: " + lista3.getSize());
-        while (it3.hasNext()) {
-            System.out.println("Dato:" + it3.next());
-        }
-
-        System.out.println("----------------------------");
-
-       it3 = lista3.getReverseIterator();
-
-        while (it3.hasNext()) {
-            Float date = it3.next();
-
-            System.out.println("Dato: " + date);
-        }
-
     }
 }

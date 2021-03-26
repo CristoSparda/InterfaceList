@@ -70,7 +70,7 @@ public class LinkedListG<G> implements InterfaceList<G>{
 
     private static int listsCount = 0;
 
-    private static int getListCount(){
+    public static int getListCount(){
         return listsCount;
     }
 
