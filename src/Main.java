@@ -1,12 +1,9 @@
 import complements.ArrayList;
 import complements.InterfaceList;
 import complements.IteratorGen;
-import complements.LinkedListG;
 
 public class Main{
     public static void main(String []args) {
-
-        int cuenta = LinkedListG.getListCount();
 
         InterfaceList<Integer> lista1 = new ArrayList<>();
         InterfaceList<String> lista2 = new ArrayList<>();
