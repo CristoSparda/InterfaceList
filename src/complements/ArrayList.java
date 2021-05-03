@@ -78,8 +78,33 @@ public class ArrayList<G> implements InterfaceList<G>{
     public void insert(G data,Position position,IteratorGen<G> it){
 
     }
-    @Override
+
+
+    public class FordwardReverseIterator implements IteratorGen<G>{
+        private int currentIndex;
+
+        public FordwardReverseIterator(){
+            this.currentIndex = size-1;//head
+        }
+
+        public FordwardReverseIterator(FordwardReverseIterator iterator)  {
+            currentIndex = iterator.currentIndex;
+        }
+
+        public boolean hasNext(){
+            return currentIndex >= 0;
+        }
+
+        public G next(){
+            return (G)array[currentIndex--];
+        }
+
+        Object getCurrentIndex(){
+            return currentIndex;
+        }
+    }
+
     public IteratorGen<G> getReverseIterator(){
-       return null;
+       return new FordwardReverseIterator();
     }
 }
