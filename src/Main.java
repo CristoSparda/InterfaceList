@@ -25,19 +25,9 @@ public class Main{
         lista3.add(45.10F);
         lista3.add(90.29F);
 
-        /*while (it.hasNext()) {
-            LinkedListG<Integer>.Iterator backupIt = lista1.new IteratorGen(it);
-            int element = it.next(); //regresa el dato y avanza al iterador
-            if (element == 3) {
-                lista1.insert(10, Position.BEFORE, backupIt);
-            }
-            if (element == 7) {
-                lista1.insert(15, Position.AFTER, backupIt);
-            }
-        }*/
 
         System.out.println("--------------------------------");
-
+        System.out.println(" Lista 1: ");
         System.out.println("El tamaño es: " + lista1.getSize());
 
         IteratorGen<Integer> it = lista1.getIterator();
@@ -49,7 +39,10 @@ public class Main{
 
         lista1.delete(3);
 
+
         System.out.println("-----------------------------");
+        System.out.println(" Lista 1 con Reverse: ");
+        System.out.println("El tamaño después de borar es: " + lista1.getSize());
 
         it = lista1.getReverseIterator();
 
@@ -60,7 +53,7 @@ public class Main{
         }
 
         System.out.println("----------------------------");
-
+        System.out.println(" Lista 2: ");
         IteratorGen<String> it2 = lista2.getIterator();
         System.out.println("El tamaño es: " + lista2.getSize());
         while (it2.hasNext()) {
@@ -68,17 +61,17 @@ public class Main{
         }
 
         System.out.println("----------------------------");
-
+        System.out.println(" Lista 2 con Reverse: ");
         it2 = lista2.getReverseIterator();
 
-        while (it.hasNext()) {
+        while (it2.hasNext()) {
             String name = it2.next();
 
             System.out.println("Dato: " + name);
         }
 
         System.out.println("----------------------------");
-
+        System.out.println(" Lista 3: ");
         IteratorGen<Float> it3 = lista3.getIterator();
         System.out.println("El tamaño es: " + lista3.getSize());
         while (it3.hasNext()) {
@@ -86,7 +79,7 @@ public class Main{
         }
 
         System.out.println("----------------------------");
-
+        System.out.println(" Lista 3 con Reverse: ");
        it3 = lista3.getReverseIterator();
 
         while (it3.hasNext()) {
